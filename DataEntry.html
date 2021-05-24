@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	body{
+		background-color: peachpuff;
+	}	
+.button {
+  border: none;
+  background-color: peru;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
+<title>Dataentry</title>
+</head>
+
+<body>
+<h1>Student Survey Form</h1>
+<form action="https://formkeep.com/f/fd04cf219c69"
+      accept-charset="UTF-8"
+      enctype="multipart/form-data"
+      method="POST">
+<label for="StudentName">Enter your name:</label>
+<input list="StudentSelection" id="StudentName" name="Student Name" />
+<h3>Enter the names of the five people at the school you are closest to</h3>
+<label for="StudentName">Person 1:</label>
+<input list="StudentSelection" id="Friend1" name="Friend1 Name" />
+</br>
+</br>
+<label for="StudentName">Person 2:</label>
+<input list="StudentSelection" id="Friend2" name="Friend2 Name" />
+</br>
+</br>
+<label for="StudentName">Person 3:</label>
+<input list="StudentSelection" id="Friend3" name="Friend3 Name" />
+</br>
+</br>
+<label for="StudentName">Person 4:</label>
+<input list="StudentSelection" id="Friend4" name="Friend4 Name" />
+</br>
+</br>
+<label for="StudentName">Person 5:</label>
+<input list="StudentSelection" id="Friend5" name="Friend5 Name"/>
+<h3>Please answer these Questions</h3>
+<p>Please select your gender:</p>
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label><br>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label><br>
+<input type="radio" id="other" name="gender" value="other">
+<label for="other">Other</label>
+
+<p>Please select your age:</p>
+<input type="radio" id="age1" name="age" value="16">
+<label for="age1">16</label><br>
+<input type="radio" id="age2" name="age" value="17">
+<label for="age2">17</label><br>  
+<input type="radio" id="age3" name="age" value="18">
+<label for="age3">18</label>
+<br>
+<p>Please select you ethnicity:</p>
+<select name="ethnicity" id="ethnicity">
+  <option value="white">White</option>
+  <option value="asian">Asian</option>
+  <option value="black">Black</option>
+  <option value="indigenous">Indigenous</option>
+</select>
+<br>
+<p>Were you in the selective stream at your previous school:</p>
+<input type="radio" id="selective" name="sel" value="Yes">
+<label for="selective">Yes</label><br>
+<input type="radio" id="mainstream" name="sel" value="No">
+<label for="mainstream">No</label><br>  
+<br>
+<button class="button"type="submit">Submit</button>
+</form>
+<datalist id="StudentSelection">
+
+</datalist>
+<script>
+var students = ["Kyran Adam", "Killian Adamowicz", "Gemma Adcock", "Luca Agius", "Husain Akil", "Leon Akkin", "Benjamin Ambrose", "Phillip Andrews", "Asha Angus", "Zakk AS", "Hannah Annon", "Nadia Annon", "Hamish Antrum", "Amelie Araya", "Lucy Austen-Paine", "John Austria", "Charlotte Avery", "Erik Azezi", "Steven Bai", "Amit Bailwal", "Delia Baker", "Lola Baker", "Zachary BM", "Chloe Banuelos", "Alisa Barclay ", "Chloe Barton", "Neave Barwick", "Amy BM", "Jayden Bernia", "Jack Bertram", "Daisy BS", "Shawaiz Bhatti", "George Bilich", "Nathan Binisares", "Angela Biondo", "Geena Blackwood", "Hazel Bluett", "Tadhg Bourrelly", "Charles Boyd", "Timothy Brenner", "Annika Broadbent", "Bailey Brown", "Corey Brown", "Lauren Brown", "Melody Bui", "Samantha Burgess", "Finn Butler", "Alice Cagney", "Jessica Callaghan", "Finn Campbell", "Asher Carey", "Gabriella Carpalhoso", "Sarah CL", "Corban Carter", "Jack Carter", "Oliver Carter", "Layla Cases", "Jordan Cattell", "Aidan CN", "Freya Celata", "Colorado Chahwan", "Marina Chaves", "Donna Chen", "Honghao Chen", "Otto CP", "Sung Cho", "Harriet Choi", "Joanne Choi", "Angelina Christison", "Poppy Christo", "Maximo Cirillo", "Arizona-Ruby Clarkson", "Finn CJ", "Ronan Clift", "Leon Cody", "Mariana CS", "Florence Collins", "Aidan Connolly", "Liam Cook", "Matilda CA", "Daisy Copping", "Jerome Costa", "Oban", "Natalie Coupland", "Beth Crawford", "Chloe Crone", "Olive Currie", "Estelle Cutler", "Anthony Damcevski", "Nicholas Damis", "Omar DT", "Rowan Davis", "Mayela Dayeg", "Maximilian Bono", "Lorena Cueva", "Alexander Deligiannis", "Persia DA", "Gustav Devylder", "Fatiyah Diab", "Luke Guglielmo", "Jonathon Dimtropoulous", "Tony Dong", "Maximilian Donnellan", "Jack Downey", "Darcy Doyle", "Jamie Drake", "Cooper Drew", "Mina Duatkhunthod", "Cooper Dunleavy", "Devin Duong", "Supakom Dusityotin", "Scarlett Duthie", "Charlie Eccles", "Nikita Egert", "Dallas Elsey", "Benjamin England", "Koko Faen", "Arrian Fairbrother", "Charlie Famularo", "Mikayla Fay", "Connor Feeney", "Luke Fesel", "Oliver Fioretto", "Jess Fitzpatrick", "Liv Foust", "Pepa Franklin", "Brianna Fraser", "Samuel Frigerio", "Max Fuller", "Heloiza GR", "Yining Gao", "Joon GB", "Reggie Gartrell", "James Gass", "I Made Gde Gayatra", "Claire Gaynor", "Jaden Georgoulas", "Alexandra Giorgianni", "Isabella Giraldo", "Kai Goes", "Rowan Gould", "Benjamin Gowland", "Isabella Grabinski", "James Granger", "Jamie Gray", "Ash GK", "Jamie Grieve", "Jessica Grimes", "Thomas Hagan", "Charlotte Hall", "Liam Hall", "Angie Hamilton", "Jerry Han", "Louis Hardman", "Millie Harris", "Jamie Harvey", "Ella Heads", "Zachary Heydon", "Prospera Holder Young", "Daniel Hopper", "Alexander Houguet", "Rachel Innes", "Travis Irwin", "Kwame Itzkuauhtli", "Luke IE", "Rose Jan", "Riley Jarrett", "Atilia Jessur", "Marson Jiang", "Dashiell Jocys", "Naomi Johnaton", "Paris Johnston", "Jensen Jones", "Keira Jones", "Taura Jones", "Filip Jovcevski", "Joelle Jung", "Sean Jung", "Krystain Kaloudis", "Sidharth KN", "Pranatsama Keechuen", "Nina Kelly", "Jessica Kennedy", "Caitlin Kerr", "Zoe Kerr", "Alpha Kerr", "Alpha Kho", "Maris KQ", "Riley KQ", "Amelia Kilby", "Eunhye Kim", "Lucia King", "Lily Kirkwood", "Zachary Konfino", "Brendon Kook", "Max Koolmees", "Samuel Kozianski", "Amelia Laidler", "Oscar LH", "Amilia CS", "Alex Lee", "Ansel Lee", "Peter Lee", "Aidan Leese", "Seith Marseny", "David Lennox", "Xavier Leonard", "Caterina Li", "James Li", "Minghao Li", "Joseph Lim", "Elizabeth Limpremwatana", "Crystal Lin", "Nirmayee Londhe", "Henrique Loureiro", "Jordan Low", "Clara LM", "Oscar Ma", "Alwyn Maddox", "Sidney Mahinya", "Loketi Mahoni", "Marcus Mallard", "William Mammone", "Zakariya Martin", "Alexander Massey", "Thomas Matahau", "Yusei Matsuoka", "Joshua McArthur", "Callum McCracken", "Alexander McGregor", "Anabelle McLusky", "Luka Melvin", "Aaron Mendez", "Peggy Messer", "Mia Milanovic", "Sunny MK", "Thomas Minnett", "Angus Mitchell", "Holly Mitchell", "Billy Moffitt", "Tia MB", "Gabriella Moretti", "Larissa Morozoff", "Isabel Morris", "Oscar Morris", "Julian Moss", "Thomas Moyle", "Ella Muir", "Tanisha Murda", "Brian Muroyi", "Mohammad Murtaza", "Adinda Mutiara", "Isabelle Myers", "Marlon Myers", "Harley Nador", "Darshan NS", "Maxim Nechiporenko", "Stephen Neilsen", "Harrison NC", "Lucas Newman", "Eddie Nguyen", "Loi Dac Nguyen", "Tom Nguyen", "Sarah Nguyen", "Trieu Nguyen", "Oscar Nicol", "Stephanie Nicolopoulos", "Adam Nunziante", "Anthony Nyoon", "Finnegan OConnor", "Nicholas OHearn", "Zara Onay", "Euno Orate", "Ceyda Oz", "Jacob Palamidas", "Luca Papadakis", "Alexander Parker", "Max Parker", "Monica Paroli", "Otto Paton", "Porsha Patterson", "Benjamin Pearcy", "Bronte PC", "Zara PS", "Carlo Perkins", "Chloe Phan", "Khiet AP", "Chomnaphat Phukkanasut", "Gisella Pipino", "Rebecca Pisati", "Anna Plume", "K-Jay Pogado", "Ethan Pollack", "Varut Ponluksanapimol", "Joseph Postaj", "DJ Pratt", "Chonnapat Pu", "Insaaf Rahman", "Persia Ramezani", "Jemma Ramsay", "Emma Randell", "Chloe Rattray", "Joshua Rawsthorne", "Abbey Read", "Auri Read-Lilje", "Charlie Reynolds", "Molly Rice", "Luke Ringrose", "Toby Robertson", "Ashton Robinson", "Jude Robles", "Elizabeth Roche", "Finley Roddis", "Cameron Rogers", "Jarrah Russell", "Christopher Sabahi", "Mikaeel Saheem", "Veronica Sainsbury", "Star Sanchez", "Archie Sanderson", "Ben Sardelic", "Natalija Savkovic", "Joseph Schmitzer", "Louis Schneider", "Gianni Sciacca", "Wednesday Sheedy", "Oliver Shim", "Oliver Short", "Mia SL", "Elli Rose Skarparis", "Terri Skuthorpe", "Julita Soeripto", "Chiaraloreta Spinazzola", "Lachlan Stanton", "Tom Stuhmcke", "Vajra Stylianou", "Harrison Supit", "Anass Talab", "Rosie Taranto", "Milo TW", "Mourabri Thomas", "Maximilian Thompson", "Kira Thorpe", "Garreth Thung", "Riley Thurloe", "Annie Tidswell", "Ritika Tiwari", "Dyan Phan Tjhia", "Mai Ahn Tran", "Dylan Truong", "Zachariah Ullrich", "Harry Uussaar", "Thomas Van Gool", "Evan Van Heemst", "Maaike Van Meer", "Manu Van Ogtrop", "Louise Van Tijn", "Thomas Varvell", "Yeswanth Vamulapalli", "Chayton VC", "Pimmada Vijitsirisopon", "Eleanor Vineburg", "Mitchell Wagstaffe", "Callum Walker", "Catherine Wallace", "Grace Waller", "Dany Wang", "Haitao Wang", "Oliver WP", "Huw Watson", "Oliver Watt", "Lily WS", "Axel Weiley", "James Wetton", "Henry Wheeler", "Ethan Whereat", "Lucia White", "Elijah Williams", "Jacqueta Williams", "Naomi Williams", "Tom Williams", "Tyriesha Williams", "Louis Wilson", "Tahlee Windsor", "Drew Witten", "Jayden Wong", "Charity Wu", "Myrtie Xanthakos", "Selina Xu", "Virun Yantaraka", "Amira Yi", "Azad Yilmaz", "Ian Young", "Lauren Young", "Noah Young", "Oscar Yuen", "Alan Zhang", "Chloe Zhang", "Hongtu Zhang", "Yiteng Zhang", "Leon Zhao", "Zixun Zhao", "Aaron Zurlo", "Oscar BA", "Leto Bui Jones", "Jesse Cases", "Angelina Collett", "Sy Deighton", "Jack Duckworth", "Sarah Eddikaoui", "Ike Edwards", "Maina Filo", "Sophia Gibson", "Molly Hoban", "Billie Hodgson", "Chi Hung Hui", "Gemma Impala", "Jack Cossec", "Daniel Lee", "Korey Lineen", "Penelope Mataikamoana", "Ryan McCarthy", "Christopher McMahon", "Jack Miller", "Wendell Mumbulla", "Molly Murray", "Jordaine Nemaz", "Thanh Nguyen", "Jesse Norman", "Matthew Ollevou", "Kshama Owen", "Kongkrittiphat Photan", "Darcy Pritchard", "William Raglus", "Christian Ristevski", "Grace Robinson", "Emily Schaidt Pereira", "Willem Sharpe", "Joanne Smith", "Arthur Thein", "Deveaux Treadwell-Ng", "Isobel Vincent", "Zara Wilan", "Anouk Wursig Schlotterbeck"];
+	
+students.sort();
+
+var options = '';
+	
+function PrintDeets(){
+var deet = ''
+deet = document.getElementById("StudentName").value + '|'
+if(document.getElementById("Friend1").value != ""){
+ deet += document.getElementById("Friend1").value + '|'	
+}
+if(document.getElementById("Friend2").value != ""){
+ deet += document.getElementById("Friend2").value + '|'	
+}
+if(document.getElementById("Friend3").value != ""){
+ deet += document.getElementById("Friend3").value + '|'	
+}
+if(document.getElementById("Friend4").value != ""){
+ deet += document.getElementById("Friend4").value + '|'	
+}
+if(document.getElementById("Friend5").value != ""){
+ deet += document.getElementById("Friend5").value + '|'	
+}
+if (document.getElementById("female").checked) {
+  deet += document.getElementById("female").value + '|';
+}else if (document.getElementById("male").checked) {
+  deet += document.getElementById("male").value + '|';
+}else{
+  deet += "other" + '|'
+}
+if (document.getElementById("age1").checked) {
+  deet += "16" + "|";
+}else if (document.getElementById("age2").checked) {
+  deet += "17"+"|";
+}else{
+  deet += "18" + "|";
+}
+deet += document.getElementById("ethnicity").value + "|";
+if(document.getElementById("selective").checked){
+	deet += "Y"
+}else{
+	deet += "N"
+}
+console.log(deet);
+document.getElementById("StudentName").value = "";
+document.getElementById("Friend1").value = "";
+document.getElementById("Friend2").value = "";
+document.getElementById("Friend3").value = "";
+document.getElementById("Friend4").value = "";
+document.getElementById("Friend5").value = "";
+document.getElementById("male").checked = false;
+document.getElementById("female").checked = false;
+document.getElementById("other").checked = false;
+document.getElementById("age1").checked = false;
+document.getElementById("age2").checked = false;
+document.getElementById("age3").checked = false;
+document.getElementById("selective").checked = false;
+document.getElementById("mainstream").checked = false;
+}
+for (var i = 0; i < students.length; i++) {
+  options += '<option value="' + students[i] + '" />';
+}
+
+document.getElementById("StudentSelection").innerHTML = options;
+</script>
+</body>
+</html>

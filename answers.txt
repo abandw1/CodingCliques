@@ -1,0 +1,37 @@
+Anass Talab,Jesse Cases,Maxim Nechiporenko,David Lennox,Zachary BM,Dallas Elsey,male,16,black,N
+Finnegan OConnor,Thomas Varvell,Liam Hall,Mayela Day,Leto Bui Jones,Caterina Li,male,16,white,Y
+Haitao Wang,Finnegan OConnor,Marson Jiang,Tom Ngyuen,Thomas Varvell,Nikita Egert,male,17,asian,N
+Sidharth KN,David Lennox,Noah Young,Garreth Thung,Tom Nguyen,Auri Read-Lilje,male,16,asian,N
+Maxim Nechiporenko,Timothy Brenner,Anass Talab,Corey Brown,Louise Van Tijn,male,17,white,N
+Garreth Thung,Aaron Zurlo,Sidharth KN,David Lennox,Ian Young,James Li,male,16,asian,N
+Poppy Christo,Natalie Coupland,Naomi Johnaton,Jack Miller,Jesse Cases,Jarrah Russell,female,16,white,N
+Joshua McArthur,Louis Schneider,Jamie Harvey,Thomas Minnett,Nicholas OHearn,Riley Thurloe,male,17,white,N
+Jamie Harvey,Louis Schneider,Joshua McArthur,Thomas Minnett,Charles Boyd,Riley Thurloe,male,16,white,Y
+Charles Boyd,Riley Thurloe,Thomas Minnett,Zakariya Martin,Nicholas OHearn,Darcy Pritchard,male,17,white,N
+Joon GB,Amelie Araya,Anna Plume,Paris Johnston,Molly Rice,male,17,a,sian,Y
+Harrison NC,Billie Hodgson,Krystain Kaloudis,Noah Young,male,17,white,N
+Ethan Pollack,Cooper Drew,Jayden Bernia,male,17,white,N
+Thomas Varvell,Killian Adamowicz,Finnegan OConnor,Alexander McGregor,Liam Hall,Caterina Li,male,17,white,Y
+Liam Hall,Killian Adamowicz,Finnegan OConnor,Chloe Zhang,Thomas Varvell,Nathan Binisares,male,17,white,Y
+Noah Young,Sidharth KN,David Lennox,Oscar Nicol,Timothy Brenner,Tom Nguyen,male,17,white,N
+Asher Carey,male,17,white,N
+Tom Nguyen,Marson Jiang,Sidharth KN,Mikaeel Saheem,Haitao Wang,Eddie Nguyen,female,16,asian,Y
+Benjamin Pearcy,Jack Downey,Connor Feeney,Honghao Chen,Oliver Short,male,16,asian,Y
+Jarrah Russell,Natalie Coupland,Alice Cagney,Louis Hardman,Jesse Cases,Otto CP,male,16,white,Y
+Naomi Johnaton,Jesse Cases,Natalie Coupland,Jarrah Russell,Otto CP,Chiaraloreta Spinazzola,female,16,white,N
+Rowan Davis,Alice Cagney,Jesse Cases,Maximilian Donnellan,Jack Miller,Benjamin England,male,16,white,Y
+Alice Cagney,Rowan Davis,Mia SL,Delia Baker,Hazel Bluett,Benjamin England,female,17,white,Y
+Alexander Houguet,Matilda CA,Darcy Pritchard,Louis Wilson,Adinda Mutiara,male,16,white,Y
+Oliver Fioretto,Pepa Franklin,Adinda Mutiara,Jack Miller,Jarrah Russell,Luca Papadakis,male,17,white,Y
+Otto CP,Jarrah Russell,Jack Miller,Jesse Cases,Darcy Pritchard,Alexander Houguet,male,17,white,Y
+Jesse Cases,Jack Miller,Naomi Johnston,Natalie Coupland,Anass Talab,Otto CP,male,16,asian,N
+Natalie Coupland,Jesse Cases,Naomi Johnaton,Jarrah Russell,Poppy Christo,Estelle Cutler,female,16,white,N
+Lucia King,Annika Broadbent,Matilda CA,Rose Jan,Angie Hamilton,Persia DA,female,16,white,Y
+Rose Jan,Jess Fitzpatrick,Gemma Adcock,Izzy Myers,Lucia King,Daisy BS,female,17,asian,N
+Gemma Adcock,Rose Jan,Jess Fitzpatrick,Chloe Barton,Brianna Fraser,Daisy BS,female,17,black,N
+Annika Broadbent,Ben Sardelic,Lucia King,Jamie Grieve,Jess Fitzpatrick,Gemma Adcock,female,17,white,Y
+Pepa Franklin,Daisy BS,Molly Murray,Isabelle Myers,Alwyn Maddox,Annika Broadbent,female,17,white,Y
+Beth Crawford,Jamie Grieve,Persia DA,Jess Fitzpatrick,Rose Jan,Koko Faen,female,16,white,Y
+Jess Fitzpatrick,Rose Jan,Gemma Adcock,Annika Broadbent,Chloe Barton,Isabelle Myers,female,16,white,N
+Jamie Grieve,Beth Crawford,Persia DA,Annika Broadbent,Chloe Barton,Daisy BS,female,17,white,Y
+Maleya Dayeh,Alisa Barclay,Chloe Zhang,Leto Bui Jones,Finnegan OConnor,Liam Hall,female,16,black,Y
