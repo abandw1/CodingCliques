@@ -19,7 +19,7 @@ tempcount = 0;
 tempval = 0;
 
 function preload(){
-  table = loadTable('assets/data.csv', 'csv');
+  table = loadTable('NodeMapProg/assets/Data.csv', 'csv');
   
 }
 
