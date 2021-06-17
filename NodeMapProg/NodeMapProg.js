@@ -5,8 +5,8 @@ let Groups = [];
 let font;
 let table;
 let stack = [];
-diameter = 10;
-buffer = 10;
+diameter = 40;
+buffer = 40;
 aggDist = 0;
 universalBoolean = true;
 capTries = 200;
@@ -27,9 +27,10 @@ function preload(){
 
 
 function setup() {
+
 textSize(32);
 
-createCanvas(710, 400);
+createCanvas(2600,1600);
 
 
 amount = table.getRowCount();
@@ -152,6 +153,7 @@ update(){ this.distance = dist(nodes[this.start].x,nodes[this.start].y,nodes[thi
 }
 
 display(){
+  strokeWeight(3);
   stroke(this.col);
  line(nodes[this.start].x,nodes[this.start].y,nodes[this.end].x,nodes[this.end].y);
  stroke(0);
