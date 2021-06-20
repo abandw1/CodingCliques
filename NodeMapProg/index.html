@@ -3,21 +3,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
-  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
-  <script language="javascript" type="text/javascript" src="Groups.js"></script>
-  <script language="javascript" type="text/javascript" src="NodeMapProg.js"></script>
-  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
 
   <!-- This line removes any default padding and style.
        You might only need one of these values set. -->
 <style> body { padding: 0; margin: 0; } 
 	/* Style the header with a grey background and some padding */
 .header {
-  overflow: hidden;
   background-color: #09001D;
-  padding: 2% 2%;
+  padding: 10px 16px;
+  height: 200px;
+  width: 100%;
 }
+	
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
 
 /* Style the header links */
 .header a {
@@ -27,8 +33,6 @@
   padding: 48px;
   text-decoration: none;
   font-size: 72px;
-  line-height: 50px;
-  border-radius: 4px;
 }
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
@@ -36,6 +40,22 @@
   margin-left: 35%;
   font-size: 78px;
   font-weight: bold;
+}
+.sidebar-box {
+  max-height: 120px;
+  position: relative;
+  overflow: hidden;
+}
+.sidebar-box .read-more { 
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  width: 100%; 
+  text-align: center; 
+  margin: 0; padding: 30px 0; 
+	
+  /* "transparent" only works here because == rgba(0,0,0,0) */
+  background-image: linear-gradient(to bottom, transparent, black);
 }
 
 /* Change the background color on mouse-over */
@@ -55,22 +75,68 @@
   float: right;
 }
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .header-right {
-    float: none;
-  }
+
+	h1{
+		text-size: 300px;
+	}	
+.sticky + .content {
+  padding-top: 102px;
 }
+
+#main{
+		padding-top: 500px;
+		display: flex;
+	}
+#presentation
+{   
+	padding-top: 40px;
+	padding-bottom: 40px;
+	width: 100%;
+	background-color:#595959;
+	display: flex;
+    justify-content: center;
+	}
 </style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script>var $el, $ps, $up, totalHeight;
+
+$(".sidebar-box .button").click(function() {
+      
+  totalHeight = 0
+
+  $el = $(this);
+  $p  = $el.parent();
+  $up = $p.parent();
+  $ps = $up.find("p:not('.read-more')");
+  
+  // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+  $ps.each(function() {
+    totalHeight += $(this).outerHeight();
+  });
+        
+  $up
+    .css({
+      // Set height to prevent instant jumpdown when max height is removed
+      "height": $up.height(),
+      "max-height": 9999
+    })
+    .animate({
+      "height": totalHeight
+    });
+  
+  // fade out read-more
+  $p.fadeOut();
+  
+  // prevent jump-down
+  return false;
+    
+});
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
-  <div class="header">
+  <div id="myHeader" class="header">
   <a href="taa" style="opacity:80%;">SDD</a>
   <a href="#default" class="logo">Coding Cliques</a>
   <div class="header-right">
@@ -78,6 +144,58 @@
     <a href="#contact">Insights</a>
     <a href="#about">Ethical commitment</a>
   </div>
-</div>
+	</div>
+	<div class="content">
+	<div id="presentation">
+	
+	</div>
+	<div id="Main">
+	<h1>Gender</h1>
+	<div class="sidebar-box">
+  	<p>malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  	<p class="read-more"><a href="#" class="button">Read More</a></p>
+	</div>
+	</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="Groups.js"></script>
+  <script language="javascript" type="text/javascript" src="p5js-temp-NodeMapProg7258832226701990093.js"></script>
+  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+  <script> // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+	  </script>
 </body>
 </html>

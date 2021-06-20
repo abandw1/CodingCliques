@@ -5,6 +5,8 @@ let Groups = [];
 let font;
 let table;
 let stack = [];
+displayModes = ["Group","Age","Gender","Race","Selective"];
+displayIndex = 0;
 diameter = 35;
 buffer = 30;
 aggDist = 0;
@@ -29,6 +31,7 @@ function preload(){
 function setup() {
 
 textSize(32);
+rectMode(CENTER)
 
 
 var cnv = createCanvas(2000,1600);
@@ -96,7 +99,7 @@ class Student {
     this.y = random(ra,height-ra);
     this.nlinks = [];
     this.nfriends = [];
-    this.age = str(table.getString(this.id, 6))
+    this.age = str(table.getString(this.id, 6));
     this.gender = str(table.getString(this.id, 7))[0];
     this.race = str(table.getString(this.id, 8))[0];
     this.selective = str(table.getString(this.id, 8))[0];
@@ -119,10 +122,57 @@ class Student {
   display(){
     textSize(32);
     fill(255);
-    if(this.group != -1){
-    fill(Groups[this.group][0][0],Groups[this.group][0][1],Groups[this.group][0][2]);
+    switch (displayIndex) {
+    case 0:
+      if(this.group != -1){
+      fill(Groups[this.group][0][0],Groups[this.group][0][1],Groups[this.group][0][2]);
+      }
+      ellipse(this.x, this.y, diameter, diameter);
+      break;
+    case 1:
+      fill(255);
+      noStroke();
+      square(this.x,this.y,diameter);
+      stroke(0);
+      fill(0);
+      textAlign(CENTER);
+      textSize(diameter);
+      text(str(this.age),this.x,this.y+diameter/2);
+      break;
+    case 2:
+      if(this.gender == "f"){
+        fill('#f06aa4');
+      }else if(this.gender == "m"){
+        fill('#5e9fea');
+      }else if(this.gender == "o"){
+        fill('#581192');
+      }else{
+        print("error with gender read");
+        fill(0);
+      }
+      ellipse(this.x, this.y, diameter, diameter);
+      break;
+    case 3:
+      if(this.race == "w"){
+        fill('#fdfdfe');
+      }else if(this.race == "b"){
+        fill('#020101');
+      }else if(this.race == "a"){
+        fill('#fce28b');
+      }
+      ellipse(this.x, this.y, diameter, diameter);
+      break;
+    case 4:
+      if(this.selective == "Y"){
+        fill('#800000');
+      }else if(this.selective == "N"){
+        fill('#000075');
+      }
+      ellipse(this.x, this.y, diameter, diameter);
+      break;
     }
-    ellipse(this.x, this.y, diameter, diameter);
+    
+   
     fill(0);
     //text(str(this.name),this.x,this.y);
   }
@@ -176,6 +226,12 @@ for(let i = 0; i < links.length;i++){
 function keyPressed(){
 if(key == " "){
   optimize();  
+}else if(key == "d"){
+  if(displayIndex == displayModes.length-1){
+    displayIndex = 0;
+  }else{
+  displayIndex += 1;
+  }
 }
 
 
@@ -281,7 +337,7 @@ function TrySwap(init){
   }else{
     print("swap");
     universalBoolean = false;
-     background(255,255,255);
+    background(255,255,255);
   for(var i = 0; i < nodes.length; i++){
     nodes[i].display();
   }
